@@ -5,6 +5,7 @@ def copy_github_readme_to_package():
     from shutil import copyfile
     this_filepath = os.path.abspath(__file__)
     this_filefold = os.path.dirname(this_filepath)
+    os.makedirs(this_filefold, exist_ok=True)
     source_file = os.path.join(this_filefold, 'README.md')
     target_file = os.path.join(this_filefold, 'src', 'samstatic_flask', 'doc', 'README.md')
     try:
@@ -22,7 +23,7 @@ setup_kwargs = dict(
 
     author="City10th",
     author_email="city10th@foxmail.com",
-    url="https://github.com/city10th/samstatic_flask/",
+    url="https://github.com/city10th/samstatic_flask",
 
     package_dir={'': 'src'},
     package_data={'samstatic_flask': ['doc/*.md']},
