@@ -35,3 +35,4 @@ setup_kwargs = dict(
 if __name__ == '__main__':
     copy_github_readme_to_package()
     setup(**setup_kwargs)
+    

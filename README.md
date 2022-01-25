@@ -4,8 +4,8 @@ enable the same static url (e.g. /static) search multi folders (e.g. /static /up
 * email: city10th@foxmail.com
 * [github](https://github.com/city10th/samstatic_flask)
 
-# quick start:
-## method 1:
+# quick start
+## method 1
 
 ```python
 import Flask
@@ -13,13 +13,13 @@ from samstatic_flask import SamStatic
 app = Flask(__name__)
 SamStatic(app)
 ```
-## method 2:
+## method 2
 ```python
 from samstatic_flask import FlaskWithSamStatic
 app = FlaskWithSamStatic(__name__)
 ```
 
-# option:
+# option
 ## app.config['SAMSTATIC_ENDPOINTS']
 ### SameStatic.options.ALL
 - Default. The same as 'ALL' or ('ALL',).
