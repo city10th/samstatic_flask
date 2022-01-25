@@ -21,8 +21,8 @@ setup_kwargs = dict(
     name="samstatic_flask",
     version="1.0.0",
     keywords=["samstatic_flask", "flask"],
-    description="enable the same static url search multi folders",
-    long_description="enable the same static url (e.g. /static) search multi folders (e.g. /static /upload)",
+    description="A Flask extension, which can enable the same static url search multi folders",
+    long_description="A Flask extension, which can enable the same static url (e.g. /static) search multi folders (e.g. /static /upload)",
     license="MIT Licence",
 
     author="City10th",

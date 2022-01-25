@@ -1,5 +1,5 @@
 # samstatic_flask
-enable the same static url (e.g. `/static`) search multi folders (e.g. `/static`, `/upload`) 
+A Flask extension, which can enable the same static url (e.g. `/static`) search multi folders (e.g. `/static`, `/upload`) 
 
 使Falsk支持相同静态文件路径（如：`/static`）搜索不同文件夹（如：`/static`, `/upload`）
 
