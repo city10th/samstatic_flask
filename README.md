@@ -42,10 +42,10 @@ app.register_blueprint(Blueprint('subapp', __name__,
                                  static_url_path='/static',
                                  static_folder='static_subapp_default'))
 ```
-Now, the url path `/static` will searches for files in order `static`, `static_subapp_upload`, and `static_subapp_default`.
-If the file is not in the folder `static`, samstaic_flask will search in `static_subapp_upload`, and then `static_subapp_default`.
+Now, the url path `/static` will searches for files in order `static`, `static_subapp_upload`, and `static_subapp_default`
+If the file is not in the folder `static`, samstaic_flask will search in `static_subapp_upload`, and then `static_subapp_default`
 
-Tips: `static` is the endpoint of `app`.
+Tips: `static` is the endpoint of `app`
 # Option
 ## `app.config['SAMSTATIC_ENDPOINTS']`
 ### `SameStatic.options.ALL`
@@ -53,10 +53,10 @@ Tips: `static` is the endpoint of `app`.
 - This will search the static endpoint of app and its all blueprints
 ### `SameStatic.options.DEACTIVE`
 - The same as `'DEACTIVE'` or `('DEACTIVE',)`
-- This will deactivate samstatic_flask.
+- This will deactivate samstatic_flask
 ### `(SameStatic.options.ALLOWED, {'endpoint1', 'endpoint2'})`
 - The same as `('DEACTIVE', {'endpoint1', 'endpoint2'})`
-- This will allow only customized endpoints in all static endpoints.
+- This will allow only customized endpoints in all static endpoints
 ### `(SameStatic.options.DISALLOWED, {'endpoint1', 'endpoint2'})`
 - The same as `('DISALLOWED', {'endpoint1', 'endpoint2'})`
 - This will disallow customized endpoints from all static endpoints.
