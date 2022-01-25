@@ -30,7 +30,7 @@ setup_kwargs = dict(
     url="https://github.com/city10th/samstatic_flask",
 
     package_dir={'': 'src'},
-    package_data={'samstatic_flask': ['doc/*.md', 'LICENSE']},
+    package_data={'samstatic_flask': ['doc/*.md', 'doc/LICENSE']},
     packages=find_packages(where='src'),
     platforms="any",
     install_requires=['Flask >= 2.0.0'],
