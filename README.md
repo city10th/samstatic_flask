@@ -31,7 +31,7 @@ from samstatic_flask import FlaskWithSamStatic
 app = FlaskWithSamStatic(__name__)
 ...
 ```
-### How to add multi folders
+## How to add multi folders
 An example:
 ```python
 ...
