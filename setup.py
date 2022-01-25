@@ -1,17 +1,21 @@
 from setuptools import setup, find_packages
 
-def copy_github_readme_to_package():
+def copy_github_files_to_package_doc(files:list):
     import os
     from shutil import copyfile
-    this_filepath = os.path.abspath(__file__)
-    this_filefold = os.path.dirname(this_filepath)
-    os.makedirs(this_filefold, exist_ok=True)
-    source_file = os.path.join(this_filefold, 'README.md')
-    target_file = os.path.join(this_filefold, 'src', 'samstatic_flask', 'doc', 'README.md')
-    try:
-        copyfile(source_file, target_file)
-    except Exception as e:
-        print(e)
+    def copy_it(file):
+        this_filepath = os.path.abspath(__file__)
+        this_filefold = os.path.dirname(this_filepath)
+        os.makedirs(this_filefold, exist_ok=True)
+        source_file = os.path.join(this_filefold, file)
+        target_file = os.path.join(this_filefold, 'src', 'samstatic_flask', 'doc', file)
+        try:
+            print(f'coping {source_file} -> {target_file}')
+            copyfile(source_file, target_file)
+        except Exception as e:
+            print(e)
+    for file in files:
+        copy_it(file)
 
 setup_kwargs = dict(
     name="samstatic_flask",
@@ -26,12 +30,12 @@ setup_kwargs = dict(
     url="https://github.com/city10th/samstatic_flask",
 
     package_dir={'': 'src'},
-    package_data={'samstatic_flask': ['doc/*.md']},
+    package_data={'samstatic_flask': ['doc/*.md', 'LICENSE']},
     packages=find_packages(where='src'),
     platforms="any",
     install_requires=['Flask >= 2.0.0'],
 )
 
 if __name__ == '__main__':
-    copy_github_readme_to_package()
+    copy_github_files_to_package_doc(['README.md', 'LICENSE'])
     setup(**setup_kwargs)
