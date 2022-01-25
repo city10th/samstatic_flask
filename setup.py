@@ -19,7 +19,7 @@ def copy_github_files_to_package_doc(files:list):
 
 setup_kwargs = dict(
     name="samstatic_flask",
-    version="1.0.0",
+    version="1.0.1",
     keywords=["samstatic_flask", "flask"],
     description="A Flask extension, which can enable the same static url search multi folders",
     long_description="A Flask extension, which can enable the same static url (e.g. /static) search multi folders (e.g. /static /upload)",
