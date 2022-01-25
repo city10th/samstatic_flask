@@ -59,7 +59,7 @@ Tips: `static` is the endpoint of `app`
 - This will allow only customized endpoints in all static endpoints
 ### `(SameStatic.options.DISALLOWED, {'endpoint1', 'endpoint2'})`
 - The same as `('DISALLOWED', {'endpoint1', 'endpoint2'})`
-- This will disallow customized endpoints from all static endpoints.
+- This will disallow customized endpoints from all static endpoints
 ## `app.config['SAMSTATIC_ENDPOINTS_USE_CACHE']`
 - Defualt `True`
 - `True` will cache the static endpoints
